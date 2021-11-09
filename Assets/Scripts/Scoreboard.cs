@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.IO;
 using System;
 
@@ -96,6 +95,28 @@ public class Scoreboard : MonoBehaviour
             leader =  data.listOfScores[0].playerName + " " + data.listOfScores[0].playerScore;
         }
         return leader;
+    }
+
+    public string stringOfNames()
+    {
+        string result = "";
+        foreach (NameAndScore item in data.listOfScores)
+        {
+            result += item.playerName + "\n";
+        }
+        return result;
+
+    }
+
+    public string stringOfScores()
+    {
+        string result = "";
+        foreach (NameAndScore item in data.listOfScores)
+        {
+            result += item.playerScore +"\n";
+        }
+        return result;
+
     }
 
     // Structure for saving one score with the player name.

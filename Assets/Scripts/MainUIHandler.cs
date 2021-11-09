@@ -49,6 +49,12 @@ public class MainUIHandler : MonoBehaviour
     {    
         SceneManager.LoadScene("Game", LoadSceneMode.Single);
     }
+
+    public void Leaderboard()
+    {    
+        SceneManager.LoadScene("Scoreboard", LoadSceneMode.Single);
+    }
+
     public void SaveScore()
     {
         string name = GameObject.Find("Player Name").GetComponent<TMP_InputField>().text;
